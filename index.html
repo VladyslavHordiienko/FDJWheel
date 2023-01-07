@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDJ | Mon Prix</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/main.css">
+
+    <!--Facebook Pixel Code-->
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod
+                    ? n.callMethod.apply(n, arguments)
+                    : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            'script',
+            '//connect.facebook.net/en_US/fbevents.js'
+        );
+        fbq('init', '{lander.param:fbpixel}');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id={lander.param:fbpixel}&ev=PageView&noscript=1" />
+    </noscript>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__top">
+                <div class="container">
+                    <img src="./assets/burger.png" alt="" class="header__burger">
+                    <img src="./assets/logo.png" alt="" class="header__logo">
+                    <img src="./assets/header-icons.png" alt="" class="header__menu">
+                </div>
+            </div>
+            <div class="header__bottom">
+                <img src="./assets/header-bg.png" alt="" class="header__bottom-img">
+                <div class="header__textbox">
+                    <img src="./assets/logo2.png" alt="" class="header__logobig">
+                    <h1>Nouvelle loterie</h1>
+                    <p>Faire gagner, c'est la promesse de la Française des Jeux.</p>
+                    <p>Jusqu'au prochain tirage</p>
+                    <div class="header__timer">
+                        <p>
+                            <span class="day"></span>
+                            J&nbsp;:
+                            <span class="hour"></span>
+                            H&nbsp;:
+                            <span class="minute"></span>
+                            M:
+                            <span class="seconds"></span>
+                            S
+                        </p>
+                    </div>
+                    <div class="button-yellow">Participer</div>
+                </div>
+            </div>
+        </div>
+        <main class="main">
+            <div class="steps">
+                <div class="container">
+                    <div class="steps__top">
+                        <img src="./assets/loto.png" alt="" class="steps__img">
+                        <p class="steps__text">Les conditions de participation
+                            au tirage au sort</p>
+                        <div class="button-y">Lire la suite</div>
+
+                    </div>
+                    <ul class="steps__list">
+                        <li>
+                            <div class="steps__num">1</div>
+                            <p class="steps__text">
+                                Le concours se déroule du 01.12.22 au 01.03.23 dans toute la France. Les gagnants sont
+                                sélectionnés
+                                chaque dimanche à midi.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="steps__num">2</div>
+                            <p class="steps__text">
+                                Pour participer, vous devez jouer à la roue de la fortune virtuelle, puis confirmer
+                                votre prix et passer
+                                au formulaire pour remplir vos données personnelles.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="steps__num">3</div>
+                            <p class="steps__text">
+                                Remplissez le formulaire et payez les frais de participation de 1,95 €.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiperblock" id="swiper-block">
+                <div class="swiper__top">
+                    <div class="swiper__head">
+                        <div class="container">
+                            <strong>Liste des produits</strong>
+                            <div class="swiper__nav">
+                                <div class="swiper__prev swiper-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+                                    </svg>
+                                </div>
+                                <div class="swiper__next swiper-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper__desc">
+                        <div class="container">
+                            <p>
+                                Tirage au sort hebdomadaire de 200 articles de chaque produit présenté par nos
+                                partenaires : Moulinex,
+                                Delonghi, Dyson, Samsung, Canon.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets/delonghi.jpg" alt="">
+                                <div class="swiper-slide__content">
+                                    <h2>Delonghi Magnifica S</h2>
+                                    <p>
+                                        <img src="./assets/5star.png" alt="">
+                                        <span>17,056 évaluation</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/cannon.jpg" alt="">
+                                <div class="swiper-slide__content">
+                                    <h2>Canon 400D</h2>
+                                    <p>
+                                        <img src="./assets/4.5star.png" alt="">
+                                        <span>4,329 évaluation</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/dyson.jpg" alt="">
+                                <div class="swiper-slide__content">
+                                    <h2>Dyson V11</h2>
+                                    <p>
+                                        <img src="./assets/5star.png" alt="">
+                                        <span>32,175 évaluation</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/moulinex.jpg" alt="">
+                                <div class="swiper-slide__content">
+                                    <h2>Moulinex Companion XL</h2>
+                                    <p>
+                                        <img src="./assets/4star.png" alt="">
+                                        <span>5,381 évaluation</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/samsung.jpg" alt="">
+                                <div class="swiper-slide__content">
+                                    <h2>Samsung (55") 4K Ultra HD Smart TV WiFi</h2>
+                                    <p>
+                                        <img src="./assets/4star.png" alt="">
+                                        <span>21,975 évaluation</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wheel" id="wheel-block">
+                <div class="wheel__head">
+                    <img src="./assets/wheel-head.png" alt="">
+                    <h2>Roue de la fortune</h2>
+                </div>
+                <div class="wheel__body">
+                    <img src="./assets/logo3.png" alt="">
+                    <div class="wheel__wrap">
+                        <div class="wheel__content">
+                            <img id="wheel" src="./assets/wheel.png" alt="">
+                            <img id="whellArrow" src="./assets/wheel-arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="wheel__action">
+                        <div class="wheel__count">
+                            <img src="./assets/reload.png" alt="">
+                            <p>-<span id="tryCounter">3</span></p>
+                        </div>
+                        <div class="wheel__play" id="play">
+                            <img src="./assets/play.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="container">
+                    <div class="comments__banner">
+                        <img src="./assets/loto2.png" alt="">
+                        <div class="button-yellow">
+                            Participer
+                        </div>
+                    </div>
+                    <div class="comments__wrap">
+                        <div class="comments__title">
+                            Commentaires:
+                        </div>
+                        <div class="comments__action">
+                            <img src="./assets/unnamed-user.png" alt="">
+                            <input type="text" placeholder="laisser des commentaires">
+                            <div class="button-yellow">Publier</div>
+                        </div>
+                        <div class="comments__content">
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava1.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Mélanie Mesny</h2>
+                                        <p>
+                                            Quelqu'un a-t-il déjà déposé une candidature? Avez-vous reçu un prix?
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>23</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>6 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/unnamed-user.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Justin Cazenave</h2>
+                                        <p>
+                                            Oui, j'ai participé, le responsable m'a contacté le lundi, a vérifié les
+                                            détails, m'a dit que
+                                            j'avais gagné le Dyson que j'avais dans ma roue de la fortune et qu'il
+                                            serait livré dans les 3
+                                            jours. J'attends avec impatience la livraison
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>62</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>2 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--third">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava2.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Madeleine Appell</h2>
+                                        <p>
+                                            Et j'ai déjà le paquet :) Mais ce n'est pas un Dyson, c'est l'appareil photo
+                                            que j'ai toujours
+                                            voulu !
+                                            <img src="./assets/ucannon.jpg" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>121</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>17 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/favicon.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>FDJ support</h2>
+                                        <p>
+                                            Merci pour vos commentaires, ils sont très importants pour nous car c'est la
+                                            première fois que
+                                            nous organisons ce type de loterie.
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>7</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>1 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava3.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Lambert Plouffe</h2>
+                                        <p>
+                                            Quelle chance pour vous, je n'ai encore rien gagné, mais je vais
+                                            certainement participer la
+                                            semaine prochaine !
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>418</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>1 d</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava4.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Blandine Giraud</h2>
+                                        <p>
+                                            Les gars, j'ai payé pour participer à la tombola Moulinex, j'ai peur de ne
+                                            pas avoir mon robot de
+                                            cuisine, quelqu'un a-t-il gagné ?
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>6 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava5.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Jean-Luc Beauregard</h2>
+                                        <p>
+                                            Oui, il y a quinze jours, j'ai gagné une télévision, maintenant je participe
+                                            chaque semaine !
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>32</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>2 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava7.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Alceste Dubois</h2>
+                                        <p>
+                                            Regardez ça, et c'est un miracle pour 1,95 €.
+                                            <img src="./assets/utv.jpg" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>61</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>12 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava6.jpg" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Clémence Boulanger</h2>
+                                        <p>
+                                            Merci, dans ce cas je vais créer un compte pour mon mari pour augmenter les
+                                            chances 😅😅
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>14</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>45 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava8.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Idelle Monette</h2>
+                                        <p>
+                                            La Loterie Nationale Française est une bande d'escrocs, comme toute
+                                            organisation gouvernementale !
+                                            Je n'ai jamais gagné à leur loto 😡😡😡
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>21</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>7 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava9.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Magali Sartre</h2>
+                                        <p>
+                                            lol, si tu ne veux pas le faire, ne le fais pas, je pense que les chances de
+                                            gagner sont assez
+                                            élevées, donc plus il y aura de détracteurs, plus je me rapprocherai de la
+                                            TV tant convoitée 😋
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>5 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item">
+                                <div class="comments__item-top">
+                                    <img src="./assets/ava10.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>Léonide Perrot</h2>
+                                        <p>
+                                            Au début, je n'ai rien gagné, mais la semaine suivante, j'ai décidé de
+                                            réessayer ! Tu ne vas pas
+                                            le croire, j'ai gagné ! Je n'avais jamais rien gagné de ma vie ! Mais hier,
+                                            j'ai reçu une toute
+                                            nouvelle machine à café, quelle joie ! Merci !
+                                            <img src="./assets/udelonghi.jpg" alt="">
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>11</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>1 hr</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                            <div class="comments__item comments__item--second">
+                                <div class="comments__item-top">
+                                    <img src="./assets/favicon.png" alt="" class="comments__avatar">
+                                    <div class="comments__text">
+                                        <h2>FDJ support</h2>
+                                        <p>
+                                            Félicitations ! Merci de nous faire confiance !
+                                        </p>
+                                    </div>
+                                    <div class="comments__reaction">
+                                        <div class="comments__icon comments__like"></div>
+                                        <div class="comments__icon comments__smile"></div>
+                                        <div class="comments__icon comments__hearth"></div>
+                                        <span>14</span>
+                                    </div>
+                                </div>
+                                <div class="comments__item-bottom">
+                                    <span>4 min</span>
+                                    <span>aimer</span>
+                                    <span>répondre</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social">
+                <div class="container">
+                    <h2>
+                        Abonnez-vous à la newsletter et recevez l’actualité et des offres exclusives pour jouer sur
+                        FDJ.fr
+                    </h2>
+                    <img src="./assets/social.png" alt="" class="social__links">
+                </div>
+            </div>
+            <div class="pay">
+                <div class="container">
+                    <p>Votre identifiant de consentement est</p>
+                    <p>"1221121628456017400349"</p>
+                    <h2>
+                        Personnalisation :
+                    </h2>
+                    <p>
+                        - Test 176459 - variation 795407
+                    </p>
+                    <p>
+                        - Test 177751 - variation reference
+                    </p>
+                    <img src="./assets/pay.png" alt="">
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <h2 class="footer__title">Mentions légales</h2>
+                    <p>
+                        (9a) Gain maximum pour une mise de 30 Jetons au jeu La Roue version Or<br>
+                        (9c) Pour toute 1ère connexion avec le compte FDJ et <br>utilisables uniquement sur les formules
+                        de jeu
+                        multijoueur <br>dans un délai de 30 jours à compter de leur attribution. Voir <br>règlement sur
+                        fdj.fr. et
+                        sur
+                        l'application Wizz
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom"></div>
+        </div>
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__head">
+                    <h2 class="modal__title">WOW!</h2>
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <p class="modal__text">
+                    Félicitations, vous avez reçu un +1FS ! Vous avez (3) essais supplémentaires, bonne chance !
+                </p>
+                <div class="modal__button">Continuer!</div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="popup__content">
+                <div>
+                    <img src="./assets/logo.png" alt="" class="popup__logo">
+                    <h2 class="popup__title">Super Prix !</h2>
+                    <p class="popup__text">Choisissez votre produit</p>
+                </div>
+                <div class="popup__prize">
+                    <div class="popup__row">
+                        <div class="popup__img"><img class="popup__photo" src="./assets/dyson.jpg" alt=""></div>
+                        <div class="popup__img"><img class="popup__photo" src="./assets/delonghi.jpg" alt=""></div>
+                    </div>
+                    <div class="popup__row">
+                        <div class="popup__img"><img class="popup__photo" src="./assets/cannon.jpg" alt=""></div>
+                        <div class="popup__img"><img class="popup__photo" src="./assets/samsung.jpg" alt=""></div>
+                    </div>
+                    <div class="popup__row">
+                        <div class="popup__img"><img class="popup__photo" src="./assets/moulinex.jpg" alt=""></div>
+                    </div>
+                </div>
+                <a href="https://{trackingdomain}/click/?origin={origin}&fbpixel={lander.param:fbpixel}"
+                    onclick="fbq('track', 'InitiateCheckout');" class="popup__button">Participer</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>
